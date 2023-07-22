@@ -32,3 +32,16 @@ body {
 .hover-text {
   position: relative;
 }
+
+/* banner */
+.banner{
+  background-image: url(https://i.ibb.co/w0VFhpj/i-Stock-936032434.jpg);
+   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+hr {
+  border: 2px solid black;
+  opacity: 50%;
+}
