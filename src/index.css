@@ -41,7 +41,38 @@ body {
   background-size: cover;
 }
 
+
 hr {
   border: 2px solid black;
   opacity: 50%;
 }
+
+
+.text{
+	font-family: 'arial black';
+	/* font-size: 50px; */
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	margin-left: 50%;
+	transform: translateX(-200%);
+	opacity: 0;
+	animation: slide-in-anim 1.5s ease-out forwards;
+}
+
+@keyframes slide-in-anim {
+	20% {
+		opacity: 0;
+	}
+	60% {
+		transform: translateX(-45%);
+	}
+	75% {
+		transform: translateX(-52%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(-50%);
+	}
+}
+

@@ -9,31 +9,29 @@ const images = [
   "https://i.ibb.co/XCwZBkw/360-F-338752127-Ke-LWD80r6a6t-Nug-Fm-Vrvcma5z-N5jd-QBn.jpg",
 ];
 
-import React from 'react';
-import Masonry from 'react-responsive-masonry';
+import React from "react";
+import Masonry from "react-responsive-masonry";
 
 const Gallery = () => {
-   
-    return (
-      <div className="max-w-7xl px-5 mx-auto">
-        <h1 className="text-center font-bold text-5xl mt-14">
-          Graduate's Group Picture
-        </h1>
-        <div className="flex justify-center mt-4 mb-10">
-          <hr className="w-[25%] mb-5 broder-[4px]" />
-        </div>
-        <Masonry className="grid lg:grid-cols-3" columnsCount={3} gutter="10px">
-          {images.map((image, i) => (
-            <img
-              key={i}
-              src={image}
-              style={{ width: "100%", display: "block" }}
-            />
-          ))}
-        </Masonry>
+  return (
+    <div className="max-w-7xl px-5 mx-auto">
+      <h1 className="text-center font-bold text-5xl mt-14">
+        Graduate's Group Picture
+      </h1>
+      <div className="flex justify-center mt-4 mb-10">
+        <hr className="w-[25%] mb-5 broder-[4px]" />
       </div>
-    );
-  }
-
+      <Masonry columnsCount={3} gutter="10px">
+        {images.map((image, i) => (
+          <img
+            key={i}
+            src={image}
+            style={{ width: "100%", display: "inline-block" }}
+          />
+        ))}
+      </Masonry>
+    </div>
+  );
+};
 
 export default Gallery;
