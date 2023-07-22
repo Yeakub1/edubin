@@ -5,6 +5,7 @@ import Signup from "../Authentication/Singup/Signup";
 import ResetPassword from "../Authentication/ResetPassword/ResetPassword";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import Home from "../Pages/Home/Home/Home";
+import Details from "../Pages/Home/Collage/Details/Details";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +14,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Home/>
+        element: <Home />,
       },
+      {
+        path: "/details/:id",
+        element: <Details />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/collage/${params.id}`),
+      },
+
       {
         path: "login",
         element: <Login />,
@@ -25,11 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "resetpassword",
-        element: <ResetPassword/>
+        element: <ResetPassword />,
       },
       {
         path: "userprofile",
-        element: <UserProfile/>
+        element: <UserProfile />,
       },
     ],
   },
