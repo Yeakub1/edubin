@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 import ActiveLink from "../../utility/ActiveLink/ActiveLink";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-  
+   const { user, logOut } = useContext(AuthContext);
+
+   const handleLogOut = () => {
+     logOut()
+       .then((result) => {})
+       .catch((error) => console.log(error));
+   };
  
   return (
     <nav className="w-full bg-white shadow ">
@@ -112,11 +119,11 @@ const Navbar = () => {
           }`}
         >
           <ul className="items-center justify-center text-lg space-y-8 md:flex md:space-x-6 md:space-y-0 ">
-            {/* {user?.email ? (
+            {user?.email ? (
               <>
                 <li>
                   <ActiveLink className="mr-3" to="/dashbord/">
-                    Dashbord
+                    My College
                   </ActiveLink>
                 </li>
                 <li>
@@ -137,8 +144,7 @@ const Navbar = () => {
               </>
             ) : (
               <ActiveLink to="/login">LogIn</ActiveLink>
-            )} */}
-            <ActiveLink to="/contact">Login</ActiveLink>
+            )}
           </ul>
         </div>
       </div>
