@@ -11,7 +11,7 @@ const Research = () => {
             <hr className="w-[25%] mb-5 broder-[4px]" />
           </div>
         </div>
-        <div className="grid md:grid-cols-3">
+        <div className="grid md:grid-cols-3 justify-center">
           <div className="card w-96 glass">
             <figure>
               <img
