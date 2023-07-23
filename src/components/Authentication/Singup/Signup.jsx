@@ -56,7 +56,7 @@ const Signup = () => {
       <Helmet>
         <title>Edubin | Signup</title>
       </Helmet>
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 justify-center items-center mt-5 ">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 justify-center items-center pt-5 ">
         <div className="">
           <Lottie className="" animationData={signupAnimation} loop={true} />;
         </div>
