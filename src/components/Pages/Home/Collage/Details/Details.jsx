@@ -15,7 +15,7 @@ const Details = () => {
       admissionProcess,
     } = collage;
     return (
-      <div className="max-w-7xl px-5 mx-auto mt-16 ">
+      <div className="max-w-7xl px-5 mx-auto pt-20 ">
         <div className="grid md:grid-cols-2 gap-8 items-center justify-center mb-10">
           <div className="">
             <h1 className="text-3xl font-bold">{collegeName}</h1>

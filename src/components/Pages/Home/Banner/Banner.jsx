@@ -4,7 +4,7 @@ const Banner = () => {
     return (
       <div className="min-h-screen banner">
         <div className="max-w-7xl mx-auto px-5 text-white text-center">
-          <div className="pt-40">
+          <div className="pt-60">
             <div className="container">
               <p className="text text-3xl lg:text-5xl">
                 Choose the right theme for education

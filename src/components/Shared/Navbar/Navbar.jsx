@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 import ActiveLink from "../../utility/ActiveLink/ActiveLink";
@@ -6,7 +6,8 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-   const { user, logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  const searchRef = useRef(null)
 
    const handleLogOut = () => {
      logOut()
@@ -15,8 +16,8 @@ const Navbar = () => {
    };
  
   return (
-    <nav className="w-full bg-white shadow ">
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex ">
+    <nav className="w-full bg-white shadow fixed z-30">
+      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex sticky ">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           <div className="navbar-start ml-0">
             <Link to="/">
