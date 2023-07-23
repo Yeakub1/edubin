@@ -7,6 +7,7 @@ import UserProfile from "../Pages/UserProfile/UserProfile";
 import Home from "../Pages/Home/Home/Home";
 import Details from "../Pages/Home/Collage/Details/Details";
 import Colleges from "../Pages/Colleges/Colleges/Colleges";
+import Admission from "../Pages/Admission/Admission/Admission";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
 
       {
         path: "collage",
-        element: <Colleges/>
+        element: <Colleges />,
+      },
+      {
+        path: "admission",
+        element: <Admission/>
       },
       {
         path: "login",
