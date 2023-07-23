@@ -72,7 +72,7 @@ const Navbar = () => {
               <ActiveLink to="/">Home</ActiveLink>
             </li>
             <li className="">
-              <ActiveLink to="/about">Colleges</ActiveLink>
+              <ActiveLink to="/collage">Colleges</ActiveLink>
             </li>
             <li>
               <ActiveLink to="/contact">Admission</ActiveLink>

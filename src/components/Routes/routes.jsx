@@ -6,6 +6,7 @@ import ResetPassword from "../Authentication/ResetPassword/ResetPassword";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import Home from "../Pages/Home/Home/Home";
 import Details from "../Pages/Home/Collage/Details/Details";
+import Colleges from "../Pages/Colleges/Colleges/Colleges";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
           fetch(`http://localhost:5000/collage/${params.id}`),
       },
 
+      {
+        path: "collage",
+        element: <Colleges/>
+      },
       {
         path: "login",
         element: <Login />,
