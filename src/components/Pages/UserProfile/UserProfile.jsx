@@ -32,7 +32,7 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="my-container mt-10 md:w-1/2 md:mx-auto h-[calc(100vh-100px)]">
+    <div className="my-container pt-20 md:w-1/2 md:mx-auto h-[calc(100vh-100px)]">
       <div className="flex items-center gap-5">
         <img
           src={user?.photoURL}

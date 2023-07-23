@@ -8,6 +8,8 @@ import Home from "../Pages/Home/Home/Home";
 import Details from "../Pages/Home/Collage/Details/Details";
 import Colleges from "../Pages/Colleges/Colleges/Colleges";
 import Admission from "../Pages/Admission/Admission/Admission";
+import Form from "../Pages/Admission/Form/Form";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details />,
+        element: <PrivateRoutes><Details /></PrivateRoutes>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/collage/${params.id}`),
       },
@@ -31,7 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "admission",
-        element: <Admission/>
+        element: <Admission />,
+      },
+      {
+        path: "admission/form",
+        element: <Form />,
       },
       {
         path: "login",

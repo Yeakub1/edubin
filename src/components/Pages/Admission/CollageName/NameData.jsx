@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NameData = ({ datas }) => {
-    const { collegeName, admissionDates } = datas;
+    const {_id, collegeName, admissionDates } = datas;
     return (
       <div className="card w-96 bg-neutral text-neutral-content">
         <div className="card-body items-center text-center">
@@ -9,7 +10,9 @@ const NameData = ({ datas }) => {
           <p>Admission: {admissionDates.fall}</p>
           <p>Admission: {admissionDates.spring}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Apply Now</button>
+            <Link to='form'>
+              <button className="btn btn-primary">Apply Now</button>
+            </Link>
           </div>
         </div>
       </div>

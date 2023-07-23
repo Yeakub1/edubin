@@ -26,7 +26,7 @@ const ResetPassword = () => {
       });
   };
   return (
-    <section className="my-container mt-24">
+    <section className="my-container pt-24">
       <form
         onSubmit={handleResetPassword}
         className="mx-5 my-10 rounded-xl shadow-xl  md:w-1/2 md:mx-auto px-5 py-10 border-2 border-purple-700"
