@@ -47,7 +47,7 @@ hr {
   opacity: 50%;
 }
 
-
+/* Banner Text Annimation */
 .text{
 	font-family: 'arial black';
 	/* font-size: 50px; */
@@ -75,4 +75,3 @@ hr {
 		transform: translateX(-50%);
 	}
 }
-

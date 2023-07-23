@@ -15,7 +15,7 @@ import Masonry from "react-responsive-masonry";
 const Gallery = () => {
   return (
     <div className="max-w-7xl px-5 mx-auto">
-      <h1 className="text-center font-bold text-5xl mt-14">
+      <h1 className="text-center font-bold md:text-5xl text-3xl mt-14">
         Graduate's Group Picture
       </h1>
       <div className="flex justify-center mt-4 mb-10">

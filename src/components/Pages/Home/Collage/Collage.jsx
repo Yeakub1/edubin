@@ -10,8 +10,13 @@ const Collage = () => {
     },[])
     return (
       <div className="max-w-7xl px-5 mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 justify-center">
-                
+        <h1 className="text-center font-bold md:text-5xl text-3xl mt-14">
+          Collage information
+        </h1>
+        <div className="flex justify-center mt-4 mb-10">
+          <hr className="w-[25%] mb-5 broder-[4px]" />
+        </div>
+        <div className="grid md:grid-cols-3 gap-8 justify-center">
           {data.map((datas) => (
             <CollageData key={datas._id} datas={datas} />
           ))}
