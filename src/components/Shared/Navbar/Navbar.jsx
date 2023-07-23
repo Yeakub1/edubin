@@ -123,7 +123,7 @@ const Navbar = () => {
             {user?.email ? (
               <>
                 <li>
-                  <ActiveLink className="mr-3" to="/dashbord/">
+                  <ActiveLink className="mr-3" to="/myCollege">
                     My College
                   </ActiveLink>
                 </li>

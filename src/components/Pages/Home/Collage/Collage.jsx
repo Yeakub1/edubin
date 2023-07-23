@@ -36,16 +36,16 @@ const Collage = () => {
           {Collage.length === 3 ? (
             <button
               onClick={handleSeeAll}
-              className="px-4 py-2 bg-primary text-white rounded-md"
+              className="px-4 py-2 "
             >
-              See all Team
+              {/* See all Team */}
             </button>
           ) : (
             <button
               onClick={handleSeeLess}
               className="px-4 py-2 bg-primary text-white rounded-md"
             >
-              See Less
+              {/* See Less */}
             </button>
           )}
         </div>
