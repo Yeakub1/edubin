@@ -10,7 +10,7 @@ const images = [
 ];
 
 import React from "react";
-import Masonry from "react-responsive-masonry";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const Gallery = () => {
   return (
@@ -21,15 +21,18 @@ const Gallery = () => {
       <div className="flex justify-center mt-4 mb-10">
         <hr className="w-[25%] mb-5 broder-[4px]" />
       </div>
-      <Masonry columnsCount={3} gutter="10px">
-        {images.map((image, i) => (
-          <img
-            key={i}
-            src={image}
-            style={{ width: "100%", display: "inline-block" }}
-          />
-        ))}
-      </Masonry>
+      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <Masonry>
+          {images.map((image, i) => (
+            <img
+              key={i}
+              src={image}
+              style={{ width: "100%", display: "block" }}
+              alt=""
+            />
+          ))}
+        </Masonry>
+      </ResponsiveMasonry>
     </div>
   );
 };
