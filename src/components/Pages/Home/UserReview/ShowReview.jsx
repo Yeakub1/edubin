@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from "react-lazy-load";
 
 const ShowReview = ({ reviews }) => {
   const { name, message, image } = reviews;
@@ -6,7 +7,11 @@ const ShowReview = ({ reviews }) => {
     <div>
       <div className="cards">
         <div className="header">
-          <div className="image rounded-full"> <img src={image} alt="" /></div>
+          <div className="image rounded-full">
+            <LazyLoad offset={300}>
+              <img src={image} alt="" />
+            </LazyLoad>
+          </div>
           <div>
             <div className="stars">
               <svg
