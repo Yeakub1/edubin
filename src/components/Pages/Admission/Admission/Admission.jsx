@@ -1,13 +1,17 @@
 import React from 'react';
 import CollageName from '../CollageName/CollageName';
 import Review from '../Review/Review';
+import { Helmet } from 'react-helmet-async';
 
 const Admission = () => {
     return (
-        <div>
-            <CollageName />
-            <Review/>
-        </div>
+      <div>
+        <Helmet>
+          <title>Edubin | Admission</title>
+        </Helmet>
+        <CollageName />
+        <Review />
+      </div>
     );
 };
 
