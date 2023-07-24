@@ -11,10 +11,12 @@ import Admission from "../Pages/Admission/Admission/Admission";
 import Form from "../Pages/Admission/Form/Form";
 import PrivateRoutes from "./PrivateRoutes";
 import MyCollege from "../Pages/MyCollege/MyCollege";
+import ErrorPage from "../Shared/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <ErrorPage/>,
     element: <MainLayout />,
     children: [
       {
