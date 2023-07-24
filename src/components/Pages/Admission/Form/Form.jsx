@@ -11,57 +11,56 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-    const { user } = useContext(AuthContext);
-    const image_hostin_url = `https://api.imgbb.com/1/upload?key=${imgae_hosting}`;
+  const { user } = useContext(AuthContext);
+  const image_hostin_url = `https://api.imgbb.com/1/upload?key=${imgae_hosting}`;
 
   // const onSubmit= data=> console.log(data);
-  
-    const onSubmit = (data) => {
-      const imgdata = new FormData();
-      imgdata.append("image", data.image[0]);
-      fetch(image_hostin_url, {
-        method: "POST",
-        body: imgdata,
-      })
-        .then((res) => res.json())
-        .then((uploadImage) => {
-          if (uploadImage.success) {
-            const imgUrl = uploadImage.data.display_url;
-            const { name, email, subject, address, phone, birthday } = data;
-            const admissionform = {
-              name,
-              subject,
-              email,
-              address,
-              phone,
-              birthday,
-              image: imgUrl,
-            };
-            console.log(admissionform);
-            fetch("http://localhost:5000/admission", {
-              method: "POST",
-              headers: {
-                "content-type": "application/json",
-              },
-              body: JSON.stringify(admissionform),
-            })
-              .then((res) => res.json())
-              .then((data) => {
-                if (data.insertedId) {
-                  reset();
-                  Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Admission add successfully",
-                    showConfirmButton: false,
-                    timer: 1500,
-                  });
-                }
-              });
-          }
-        });
-  };
 
+  const onSubmit = (data) => {
+    const imgdata = new FormData();
+    imgdata.append("image", data.image[0]);
+    fetch(image_hostin_url, {
+      method: "POST",
+      body: imgdata,
+    })
+      .then((res) => res.json())
+      .then((uploadImage) => {
+        if (uploadImage.success) {
+          const imgUrl = uploadImage.data.display_url;
+          const { name, email, subject, address, phone, birthday } = data;
+          const admissionform = {
+            name,
+            subject,
+            email,
+            address,
+            phone,
+            birthday,
+            image: imgUrl,
+          };
+          console.log(admissionform);
+          fetch("https://edubin-server.vercel.app/admission", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(admissionform),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                reset();
+                Swal.fire({
+                  position: "top-end",
+                  icon: "success",
+                  title: "Admission add successfully",
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+              }
+            });
+        }
+      });
+  };
 
   return (
     <div className="max-w-7xl px-5 mx-auto">

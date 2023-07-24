@@ -29,7 +29,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/collage/${params.id}`),
+          fetch(`https://edubin-server.vercel.app/collage/${params.id}`),
       },
 
       {
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: "myCollege",
-        element: <MyCollege/>,
+        element: <MyCollege />,
       },
       {
         path: "login",

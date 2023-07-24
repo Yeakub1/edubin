@@ -3,23 +3,23 @@ import ShowReview from "./ShowReview";
 
 const UserReview = () => {
   const [review, setReview] = useState([]);
-    const [teamData, setTeamData] = useState([]);
+  const [teamData, setTeamData] = useState([]);
 
-    const handleSeeAll = () => {
-      setTeamData(review);
-    };
-    const handleSeeLess = () => {
-      setTeamData(review.slice(0, 3));
+  const handleSeeAll = () => {
+    setTeamData(review);
   };
-  
-    useEffect(() => {
-      fetch("http://localhost:5000/review")
-        .then((res) => res.json())
-        .then((data) => {
-          setTeamData(data.slice(0, 3));
-          setReview(data);
-        });
-    }, []);
+  const handleSeeLess = () => {
+    setTeamData(review.slice(0, 3));
+  };
+
+  useEffect(() => {
+    fetch("https://edubin-server.vercel.app/review")
+      .then((res) => res.json())
+      .then((data) => {
+        setTeamData(data.slice(0, 3));
+        setReview(data);
+      });
+  }, []);
 
   return (
     <div className="max-w-7xl px-5 mx-auto mb-20">

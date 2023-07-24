@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import CollageData from '../../Home/Collage/CollageData';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect, useState } from "react";
+import CollageData from "../../Home/Collage/CollageData";
+import { Helmet } from "react-helmet-async";
 
 const Colleges = () => {
-    const [Collage, setCollage] = useState([]);
-    
-    useEffect(() => {
-      fetch("http://localhost:5000/collage")
-        .then((res) => res.json())
-        .then((data) => setCollage(data));
-    }, []);
+  const [Collage, setCollage] = useState([]);
+
+  useEffect(() => {
+    fetch("https://edubin-server.vercel.app/collage")
+      .then((res) => res.json())
+      .then((data) => setCollage(data));
+  }, []);
   return (
     <>
       <Helmet>

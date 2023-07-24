@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react';
-import AdmissionData from './AdmissionData';
-import { AuthContext } from '../../Provider/AuthProvider';
-import Swal from 'sweetalert2';
+import React, { useContext, useEffect, useState } from "react";
+import AdmissionData from "./AdmissionData";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const MyCollege = () => {
   const [myAdmission, setMyAdmission] = useState([]);
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/admission/${user?.email}`)
+    fetch(`https://edubin-server.vercel.app/admission/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyAdmission(data);
@@ -28,7 +28,7 @@ const MyCollege = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Swal.fire("Deleted!", "Your file has been deleted.", "success");
-        fetch(`http://localhost:5000/admission/${_id}`, {
+        fetch(`https://edubin-server.vercel.app/admission/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
