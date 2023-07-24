@@ -4,9 +4,9 @@ const images = [
   "https://i.ibb.co/88wCBY6/group-friends-graduation.jpg",
   "https://i.ibb.co/mS0M0sf/portrait-three-smiling-graduate-friends-graduation-robes-university-campus-with-diploma.jpg",
   "https://i.ibb.co/Nmtx0Qf/group-students-taking-photos.jpg",
-  "https://i.ibb.co/K9KvYYZ/depositphotos-8963157-Graduation-group.webp",
+  "https://i.ibb.co/sPB5jvQ/graduation-concept-with-girls-taking-selfie.jpg",
   "https://i.ibb.co/87MLNPZ/happy-friends-gratuating.jpg",
-  "https://i.ibb.co/XCwZBkw/360-F-338752127-Ke-LWD80r6a6t-Nug-Fm-Vrvcma5z-N5jd-QBn.jpg",
+  "https://i.ibb.co/RzjDRLW/different-nationalities-university-graduates.jpg",
 ];
 
 import React from "react";

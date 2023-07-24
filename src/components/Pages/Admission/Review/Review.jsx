@@ -70,7 +70,7 @@ const Review = () => {
               type="text"
               {...register("name", { required: true })}
               placeholder="Your Name"
-              className="input input-bordered"
+              className="input input-bordered w-full"
               defaultValue={user?.displayName}
             />
             {errors.name && (
@@ -85,7 +85,7 @@ const Review = () => {
             <input
               type="file"
               {...register("image", { required: true })}
-              className="file-input file-input-bordered w-full max-w-xs"
+              className="file-input file-input-bordered w-full "
             />
             {errors.image && (
               <span className="text-red-800">Your Photo is required</span>
