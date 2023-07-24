@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
 const CollageData = ({ datas }) => {
@@ -12,16 +13,19 @@ const CollageData = ({ datas }) => {
     return (
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
-          <img
-            src={collegeImage}
-            className="h-48 rounded-md w-full scale-75 hover:scale-90 ease-in duration-500"
-            draggable={false}
-          />
+          <LazyLoad offset={300}>
+            <img
+              src={collegeImage}
+              className="h-48 rounded-md w-full scale-75 hover:scale-90 ease-in duration-500"
+              draggable={false}
+            />
+          </LazyLoad>
         </figure>
         <div className="px-5 text-center">
           <h2 className="font-bold text-xl">{collegeName}</h2>
           <p className=" mt-3">
-            <span className='font-bold'>Admission:</span> fall {admissionDates.fall}
+            <span className="font-bold">Admission:</span> fall{" "}
+            {admissionDates.fall}
           </p>
           <p className=" "> spring {admissionDates.spring}</p>
           <div className="flex justify-center">

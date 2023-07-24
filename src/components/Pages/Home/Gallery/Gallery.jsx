@@ -10,6 +10,7 @@ const images = [
 ];
 
 import React from "react";
+import LazyLoad from "react-lazy-load";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const Gallery = () => {
@@ -24,12 +25,14 @@ const Gallery = () => {
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
         <Masonry>
           {images.map((image, i) => (
-            <img
-              key={i}
-              src={image}
-              style={{ width: "100%", display: "block" }}
-              alt=""
-            />
+            <LazyLoad offset={300}>
+              <img
+                key={i}
+                src={image}
+                style={{ width: "100%", display: "block" }}
+                alt=""
+              />
+            </LazyLoad>
           ))}
         </Masonry>
       </ResponsiveMasonry>

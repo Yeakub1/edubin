@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import { useLoaderData } from 'react-router-dom';
 
 const Details = () => {
@@ -36,7 +37,9 @@ const Details = () => {
             </div>
           </div>
           <div className="">
-            <img className="h-72 w-full" src={collegeImage} alt="" />
+            <LazyLoad offset={300}>
+              <img className="h-72 w-full" src={collegeImage} alt="" />
+            </LazyLoad>
           </div>
         </div>
 
