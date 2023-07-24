@@ -1,41 +1,60 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import React, { useEffect, useState } from "react";
+import ShowReview from "./ShowReview";
 
 const UserReview = () => {
-    return (
-      <div className="max-w-7xl px-5 mx-auto md:w-2/4 md:mx-auto">
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
-        >
-          <SwiperSlide>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, molestias facilis harum est incidunt animi consectetur iste omnis, eum recusandae delectus inventore, pariatur in hic similique voluptates. Delectus, necessitatibus dicta!</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper>
+  const [review, setReview] = useState([]);
+    const [teamData, setTeamData] = useState([]);
+
+    const handleSeeAll = () => {
+      setTeamData(review);
+    };
+    const handleSeeLess = () => {
+      setTeamData(review.slice(0, 3));
+  };
+  
+    useEffect(() => {
+      fetch("http://localhost:5000/review")
+        .then((res) => res.json())
+        .then((data) => {
+          setTeamData(data.slice(0, 3));
+          setReview(data);
+        });
+    }, []);
+
+  return (
+    <div className="max-w-7xl px-5 mx-auto mb-20">
+      <div className="">
+        <h1 className="text-center font-bold md:text-4xl text-3xl mt-14 ">
+          Student's feedback
+        </h1>
+        <div className="flex justify-center mt-4 mb-10">
+          <hr className="w-[25%] mb-5 broder-[4px]" />
+        </div>
       </div>
-    );
+      <div className="grid md:grid-cols-3 gap-8 justify-center">
+        {teamData.map((reviews) => (
+          <ShowReview key={reviews._id} reviews={reviews} />
+        ))}
+      </div>
+      <div className={`flex justify-center mt-10`}>
+        {teamData.length === 3 ? (
+          <button
+            onClick={handleSeeAll}
+            className="px-4 py-2 bg-primary text-white rounded-md"
+          >
+            See all Team
+          </button>
+        ) : (
+          <button
+            onClick={handleSeeLess}
+            className="px-4 py-2 bg-primary text-white rounded-md"
+          >
+            See Less
+          </button>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default UserReview;

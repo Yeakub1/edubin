@@ -21,7 +21,7 @@ const Collage = () => {
     }, []);
     return (
       <div className="max-w-7xl px-5 mx-auto">
-        <h1 className="text-center font-bold md:text-5xl text-3xl mt-14">
+        <h1 className="text-center font-bold md:text-4xl text-3xl mt-14">
           Collage information
         </h1>
         <div className="flex justify-center mt-4 mb-10">

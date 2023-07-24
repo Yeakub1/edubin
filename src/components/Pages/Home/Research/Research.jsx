@@ -4,7 +4,7 @@ const Research = () => {
     return (
       <div className="max-w-7xl mx-auto px-5 mt-20 mb-10">
         <div className="">
-          <h1 className="text-center font-bold md:text-5xl text-3xl mt-14">
+          <h1 className="text-center font-bold md:text-4xl text-3xl mt-14">
             Research History
           </h1>
           <div className="flex justify-center mt-4 mb-10">

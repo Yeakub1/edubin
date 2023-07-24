@@ -7,7 +7,7 @@ const Banner = () => {
           <div className="pt-60">
             <div className="container">
               <p className="text text-3xl lg:text-5xl">
-                Choose the right theme for education
+                Choose the right Collage for education
               </p>
             </div>
             <p className="mt-10 text-xl">
@@ -23,7 +23,6 @@ const Banner = () => {
                 Get Started
               </button>
             </div>
-            
           </div>
         </div>
       </div>
