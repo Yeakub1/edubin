@@ -5,12 +5,12 @@ const AboutUs = () => {
   return (
     <div className="max-w-7xl mb-20 px-5 mx-auto">
       <div className="md:flex items-center ">
-        <div className="w-1/2">
+        <div className="md:w-1/2">
           <img src={aboutImg} alt="" className="w-100" />
         </div>
 
-        <div className="w-1/2 ">
-          <div className="ml-20">
+        <div className="md:w-1/2 ">
+          <div className="md:ml-20 md:mt-0 mt-10">
             <h2 className="text-3xl font-bold mb-3">About Us</h2>
             <p>
               Welcome to Edubin, where knowledge meets inspiration, and
