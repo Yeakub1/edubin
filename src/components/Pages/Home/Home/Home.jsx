@@ -7,6 +7,7 @@ import FreeCourse from '../FreeCourse/FreeCourse';
 import Newsletter from '../Newsletter/Newsletter';
 import Courses from '../Courses/Courses';
 import AboutUs from '../AboutUs/AboutUs';
+import ChooseUs from '../ChooseUs/ChooseUs';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <Gallery />
             <Research />
             <FreeCourse />
+            <ChooseUs/>
             <Newsletter/>
             <UserReview/>
         </div>

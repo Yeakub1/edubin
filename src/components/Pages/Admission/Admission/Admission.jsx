@@ -1,4 +1,3 @@
-import React from 'react';
 import CollageName from '../CollageName/CollageName';
 import Review from '../Review/Review';
 import { Helmet } from 'react-helmet-async';

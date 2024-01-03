@@ -1,8 +1,8 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 
 const NameData = ({ datas }) => {
-    const {_id, collegeName, admissionDates } = datas;
+    const {collegeName, admissionDates } = datas;
     return (
       <div className="card w-96 bg-neutral text-neutral-content">
         <div className="card-body items-center text-center">

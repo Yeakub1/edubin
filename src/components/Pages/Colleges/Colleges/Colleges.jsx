@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CollageData from "../../Home/Collage/CollageData";
 import { Helmet } from "react-helmet-async";
 
