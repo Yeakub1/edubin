@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/jsx-no-target-blank */
+
 
 const Research = () => {
     return (

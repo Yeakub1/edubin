@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import ShowReview from "./ShowReview";
 
 const UserReview = () => {
@@ -22,10 +22,10 @@ const UserReview = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl px-5 mx-auto mb-20">
+    <div className="max-w-7xl px-5 mx-auto my-20 ">
       <div className="">
         <h1 className="text-center font-bold md:text-4xl text-3xl mt-14 ">
-          Student's feedback
+          Students feedback
         </h1>
         <div className="flex justify-center mt-4 mb-10">
           <hr className="w-[25%] mb-5 broder-[4px]" />
@@ -42,7 +42,7 @@ const UserReview = () => {
             onClick={handleSeeAll}
             className="px-4 py-2 bg-primary text-white rounded-md"
           >
-            See all Team
+            See all Review
           </button>
         ) : (
           <button

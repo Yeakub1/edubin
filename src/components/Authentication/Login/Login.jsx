@@ -7,7 +7,6 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
-// import { collectUsers } from "../../Hooks/User";
 
 const Login = () => {
   const {
