@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
@@ -9,9 +9,8 @@ const CollageData = ({ datas }) => {
     collegeImage,
     admissionDates,
   } = datas;
-  console.log(_id);
     return (
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <div className="card w-full md:w-96 bg-base-100 shadow-xl">
         <figure>
           <LazyLoad offset={300}>
             <img
